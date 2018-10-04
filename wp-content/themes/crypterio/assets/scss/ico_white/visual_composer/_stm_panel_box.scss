@@ -1,0 +1,39 @@
+.stm_panel_box {
+	transition: .3s;
+	h3 {
+		font-size: 20px !important;
+	}
+	.stm_panel_box__content h5 {
+		font-size: 18px !important;
+		line-height: 22px !important;
+	}
+	.stm_panel_box__title {
+		font-size: 20px !important;
+		font-weight: 600;
+
+	}
+	.stm_panel_box__subtitle {
+		font-weight: 400;
+	}
+	&:hover {
+		box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.35);
+	}
+	.stm_panel_box__content {
+		background-color: #01045c !important;
+	}
+	.stm_panel_box__gradient {
+		opacity: 1;
+	}
+	.stm_panel_box__content {
+		min-height: 204px;
+		h5 {
+			font-size: 18px;
+			font-weight: 600;
+			line-height: 22px;
+			padding: 15px 0 0;
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		margin-bottom: 30px !important;
+	}
+}

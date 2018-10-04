@@ -1,0 +1,286 @@
+.stm_submit_ico {
+    margin: 50px 0;
+    &__title {
+        position: relative;
+        padding: 0 0 30px;
+        margin: 0 0 50px;
+        text-align: center;
+        &:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin: 0 0 0 -30px;
+        }
+    }
+    &__fields {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__field {
+        width: 48%;
+        display: table;
+        margin-bottom: 20px;
+        vertical-align: center;
+        .form-control {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        &_radio {
+            display: inline-block;
+            vertical-align: middle;
+            width: 35%;
+            text-align: center;
+            border: 2px solid #404040;
+            height: 40px;
+            line-height: 35px;
+            border-radius: 5px;
+            margin-right: 15px;
+            cursor: pointer;
+            transition: .3s ease;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:after {
+                content: attr(data-value);
+            }
+            &.active {
+                border-color: #326dec;
+            }
+        }
+        &_label {
+            display: table-cell;
+            padding-right: 60px;
+            vertical-align: middle;
+            width: 40%;
+            font-size: 13px;
+            line-height: 18px;
+        }
+        &_value {
+            display: table-cell;
+            width: 60%;
+            .form-control {
+                box-shadow: none !important;
+                color: #fff;
+                border: 2px solid #404040;
+                &:focus {
+                    background-color: transparent;
+                }
+            }
+        }
+        &.error {
+            .form-control {
+                border-color: #fe467c;
+            }
+        }
+    }
+
+    .select2-container.select2-container--default .select2-selection--single {
+        background-color: transparent;
+        border: 2px solid #404040;
+        border-radius: 5px;
+        .select2-selection__rendered {
+            color: #fff;
+        }
+    }
+}
+
+.select2-container .select2-dropdown .select2-results__option {
+    font-size: 16px;
+}
+
+.select2-search__field {
+    outline: none !important;
+}
+
+.select2-container.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border: 0;
+    width: 8px;
+    height: 8px;
+    border-bottom: 2px solid #326deb;
+    border-right: 2px solid #326deb;
+    transform: rotate(45deg) translateY(-3px) translateX(-3px);
+}
+
+.select2-container.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    border: 0;
+    border-top: 2px solid #326deb;
+    border-left: 2px solid #326deb;
+    transform: rotate(45deg) translateY(0px) translateX(0px);
+}
+
+input {
+    &::-webkit-calendar-picker-indicator {
+        margin-left: 5px;
+        color: #eee;
+    }
+    &:hover {
+        &::-webkit-calendar-picker-indicator {
+            background-color: transparent;
+        }
+    }
+    &::-webkit-inner-spin-button {
+        display: none;
+    }
+}
+
+.stm_submit_ico__submit {
+    display: inline-block;
+    margin: 45px auto;
+    text-align: center;
+    &_btn {
+        display: inline-block;
+        position: relative;
+        color: #fff;
+        span, i {
+            display: inline-block;
+            vertical-align: top;
+            transition: .3s opacity ease, .3s transform ease;
+        }
+        i {
+            position: relative;
+            top: 5px;
+            left: 8px;
+            font-size: 12px;
+        }
+    }
+    button[type="submit"] {
+        padding: 14px 30px;
+        min-width: 160px;
+        font-size: 16px;
+        background-color: #326dec;
+        border: 0;
+        border-radius: 6px;
+        outline: none !important;
+        &:hover {
+            i {
+                transform: translateX(3px);
+            }
+        }
+    }
+}
+
+.stm_ico_submit__file {
+    position: relative;
+    cursor: pointer;
+    input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+    }
+    span {
+        padding-top: 13px;
+        padding-right: 30px;
+        color: rgba(0,0,0,.5) !important;
+        &.has-file {
+            color: #000 !important;
+        }
+    }
+    i {
+        position: absolute;
+        right: 20px;
+        top: 14px;
+        font-size: 20px;
+        opacity: .75;
+    }
+}
+
+.submit_ico_validation {
+    .inner {
+        display: inline-block;
+        padding: 15px 30px;
+        margin-bottom: 30px;
+        border: 2px solid #00feba;
+        border-radius: 5px;
+    }
+    &.danger {
+        .inner {
+            border-color: #fe467c;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .stm_submit_ico__field {
+        &_value,
+        &_label {
+            display: block;
+            width: 100%;
+        }
+        &_label {
+            margin: 0 0 10px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .stm_submit_ico__field {
+        width: 100%;
+        &_value,
+        &_label {
+            display: block;
+            width: 100%;
+        }
+        &_label {
+            margin: 0 0 10px;
+        }
+    }
+}
+
+body.site_ico_listing {
+    .stm_submit_ico .select2-container.select2-container--default .select2-selection--single,
+    .stm_submit_ico .select2-container.select2-container--default .select2-selection--single .select2-selection__rendered,
+    .stm_submit_ico__field_value .form-control {
+        border-color: #e0e0e0;
+        color: #000;
+    }
+    .stm_submit_ico__field_radio {
+        position: relative;
+        padding: 1px;
+        border: 1px solid #e0e0e0;
+        transition: none !important;
+        &.active {
+            padding: 0;
+            border: 2px solid #326dec;
+            font-weight: 700;
+        }
+        &_no,
+        &_yes {
+            &:before {
+                content: "\f00c";
+                font: normal normal normal 14px/1 FontAwesome;
+                display: block;
+                position: absolute;
+                left: 20px;
+                top: 50%;
+                margin-top: -7px;
+                opacity: 0;
+                color: #68b541;
+            }
+            &.active {
+                &:before {
+                    opacity: 1;
+                }
+            }
+        }
+        &_no {
+            &:before {
+                content: "\f00d";
+                left: 23px;
+                color: #da0e04;
+            }
+        }
+    }
+    .submit_ico_validation.danger .inner {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}

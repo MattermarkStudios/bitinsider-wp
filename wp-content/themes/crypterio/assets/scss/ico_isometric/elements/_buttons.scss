@@ -1,0 +1,43 @@
+body div .stm_btn {
+	padding: 12px 29px 13px 29px !important;
+	transition: all .4s;
+	border-radius: 45px;
+	background-image: linear-gradient(to right,$stm_base_color 0, $stm_secondary_color 51%, $stm_base_color 100%) !important;
+	background-size: 200% auto !important;
+	font-size: 16px;
+	&:hover {
+		background-position: right center;
+		color: #fff !important;
+	}
+}
+body div .vc_btn3:not(.vc_btn3-style-outline), body div .button {
+	transition: all .4s;
+	border-radius: 45px !important;
+	background-color: transparent !important;
+	background-image: linear-gradient(to right,$stm_base_color 0, $stm_secondary_color 51%, $stm_base_color 100%) !important;
+	background-size: 200% auto !important;
+	@media (max-width: 1024px) {
+		background: none;
+		background-image: -webkit-linear-gradient linear-gradient(to right,$stm_base_color 0, $stm_secondary_color 51%, $stm_base_color 100%) !important;
+		background-image: linear-gradient(to right,$stm_base_color 0, $stm_secondary_color 51%, $stm_base_color 100%) !important;
+		background-image: -moz-linear-gradient(to right,$stm_base_color 0, $stm_secondary_color 51%, $stm_base_color 100%) !important;
+	}
+	&:hover {
+		background-position: right center;
+		color: #fff !important;
+	}
+}
+.vc_btn3.vc_btn3-size-md {
+	padding: 12px 48px 13px 48px;
+}
+body .vc_general.vc_btn3.vc_btn3-size-md.vc_btn3-icon-left:not(.vc_btn3-o-empty) .vc_btn3-icon {
+	color: inherit;
+}
+#comments button {
+	border: none !important;
+}
+.vc_cta3-actions {
+	.vc_btn3::first-letter {
+		text-transform: capitalize;
+	}
+}

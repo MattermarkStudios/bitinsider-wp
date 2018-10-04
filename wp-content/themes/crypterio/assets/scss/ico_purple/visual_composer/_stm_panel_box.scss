@@ -1,0 +1,66 @@
+body .stm_panel_box {
+	box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+	transition: .3s;
+	&__inner {
+		padding: 25px 0 0;
+	}
+	h3 {
+		font-size: 20px !important;
+	}
+	.stm_panel_box__content h5 {
+		font-size: 18px !important;
+		line-height: 22px !important;
+	}
+	.stm_panel_box__title {
+		font-size: 24px !important;
+		font-weight: 600;
+		@media (max-width: 1024px) {
+			& {
+				font-size: 20px !important;
+			}
+		}
+	}
+	.stm_panel_box__subtitle {
+		font-weight: 400;
+	}
+	.stm_panel_box__content {
+		background-color: #100736 !important;
+	}
+
+	.stm_panel_box__gradient {
+		opacity: 1;
+	}
+	.stm_panel_box__content {
+		h5 {
+			font-size: 18px;
+			font-weight: 600;
+			line-height: 22px;
+			padding: 15px 0 0;
+		}
+		h6 {
+			font-size: 18px;
+			padding: 0;
+			font-weight: 500;
+			margin-bottom: 25px;
+		}
+		ul {
+			padding-left: 0;
+			list-style-type: none;
+			li {
+				&::before {
+					content: "\e988";
+					font-family: 'stm' !important;
+					display: inline-block;
+					margin-right: 15px;
+					font-size: 24px;
+					vertical-align: middle;
+					-webkit-background-clip: text !important;
+					-webkit-text-fill-color: transparent;
+				}
+			}
+		}
+	}
+	@media only screen and (max-width: 767px) {
+		margin-bottom: 30px !important;
+	}
+}

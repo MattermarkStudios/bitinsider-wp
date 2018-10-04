@@ -1,0 +1,60 @@
+.overlapping {
+    z-index: 9999 !important;
+}
+
+#stm_ico_search {
+    .inner {
+        position: relative;
+        input {
+            background-color: #fff;
+            border: 2px solid #fff;
+            box-shadow: none !important;
+            text-align: center;
+            font-size: 16px;
+            &:focus {
+                background-color: transparent;
+                color: #fff;
+                + i + .stm_ico_search__results {
+                    visibility: visible;
+                    opacity: 1;
+                }
+                &::-webkit-input-placeholder {
+                    color: transparent;
+                }
+                + .fa {
+                    color: #fff;
+                }
+            }
+        }
+        i {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            color: #aaaaaa;
+        }
+        .stm_ico_search__results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 5px;
+            border-radius: 4px;
+            overflow: hidden;
+            visibility: hidden;
+            opacity: 0;
+            width: 100%;
+            z-index: 9999;
+            .stm_ico_search__result {
+                display: block;
+                padding: 10px 15px;
+                background-color: #fff;
+                text-align: center;
+                font-size: 14px;
+                line-height: 18px;
+                text-decoration: none !important;
+                &:hover {
+                    color: #fff !important;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,234 @@
+@import "pricing_plan";
+@import "countdown";
+@import "timeline";
+@import "post";
+@import "demo";
+
+[data-field="LOGO64"] {
+    display: none;
+}
+
+.pcw-box {
+    &.pcw-header {
+        background-color: #141414;
+        .pcw-field-PRICE,
+        .pcw-field-FROMSYMBOL {
+            color: #fff;
+        }
+    }
+}
+
+body {
+    .pcw-table.pcw-basic table {
+        margin: 50px 0 0;
+        background-color: #000;
+        border-color: #555555;
+        color: #fff;
+        tbody {
+            tr {
+                &:hover {
+                    background: transparent;
+                }
+                td {
+                    border-color: #555555;
+                }
+            }
+        }
+    }
+}
+
+.service_cost {
+    white-space: nowrap;
+}
+
+.fancybox-type-iframe {
+    .fancybox-skin {
+        padding: 0 !important;
+    }
+}
+
+.stm_post_title {
+    display: block;
+}
+
+@media screen and (max-width: 1024px) {
+    .stm_ico_countdown {
+        .flip-clock-divider {
+            width: 5px;
+            &.hours .flip-clock-label {
+                right: -80px;
+            }
+            &.minutes .flip-clock-label {
+                right: -72px;
+            }
+            &.seconds .flip-clock-label {
+                right: -70px;
+            }
+        }
+        .flip-clock-wrapper ul {
+            width: 27px;
+        }
+    }
+}
+
+.stm_wave_pulse {
+    width: 1px;
+    height: 0;
+    margin: 0 auto;
+    &:after,
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 700px;
+        height: 700px;
+        margin: -150px 0 0 -350px;
+        border-radius: 50%;
+        border: 1px solid #454648;
+        animation: stm_zoom_big 5.25s linear 5.25s infinite;
+    }
+    &:before {
+        animation-delay: .75s;
+    }
+    &_2 {
+        &:after {
+            animation-delay: 1.5s;
+        }
+        &:before {
+            animation-delay: 2.25s;
+        }
+    }
+    &_3 {
+        &:after {
+            animation-delay: 3s;
+        }
+        &:before {
+            animation-delay: 3.75s;
+        }
+    }
+    &_4 {
+        &:after {
+            animation-delay: 4.5s;
+        }
+        &:before {
+            animation-delay: 5.25s;
+        }
+    }
+}
+
+@keyframes stm_zoom_big {
+    0% {
+        transform: scale(0);
+        opacity: 1
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0
+    }
+}
+
+a {
+    transition: .3s ease;
+}
+
+.wtc_h:hover,
+.wtc {
+    color: #fff !important;
+}
+
+.stm_lazyload {
+    .lazyloading,
+    .lazyload {
+        -webkit-filter: blur(4px);
+        filter: blur(4px);
+        transition: filter 400ms, -webkit-filter 400ms;
+    }
+    .lazyloaded {
+        -webkit-filter: blur(0);
+        filter: blur(0);
+    }
+}
+
+.mc4wp-alert {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ccc;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.stm_news_list__image,
+.stm_news_grid__image {
+    position: relative;
+}
+
+.stm_post__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: 50%;
+        top: 50%;
+        margin: -25px 0 0 -25px;
+        border-radius: 50%;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: -6px 0 0 -4px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6.5px 0 6.5px 11px;
+        border-color: transparent transparent transparent #fff;
+        z-index: 9999999;
+    }
+}
+
+@media (max-width: 1024px) {
+    .stm_currencies_simple_list {
+        .simplemarquee-wrapper {
+            display: block;
+            max-width: 100%;
+            animation: none;
+        }
+        .scsl__single {
+            display: block;
+            margin: 15px 0;
+            .inner {
+                padding: 0;
+                text-align: left;
+                .scsl__name {
+                    display: block;
+                }
+                .scsl__income {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    body .stm-search.stm-search_style_1 {
+        margin: 0 0 30px;
+        .form-control {
+            position: static;
+            opacity: 1;
+        }
+        button[type="submit"] {
+            position: absolute;
+            top: 0;
+            right: 10px;
+            color: #000;
+        }
+    }
+}

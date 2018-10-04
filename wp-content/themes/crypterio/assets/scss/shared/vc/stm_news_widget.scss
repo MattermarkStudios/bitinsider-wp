@@ -1,0 +1,26 @@
+.stm_news_widget {
+    .stm_news_grid {
+        &__single {
+            width: 100%;
+        }
+        &__image {
+            float: left;
+            margin: 0 20px 0 0;
+        }
+        &__content {
+            overflow: hidden;
+            h4 {
+                padding: 0;
+                margin: -4px 0 10px 0;
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+        &__category {
+            opacity: .5;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

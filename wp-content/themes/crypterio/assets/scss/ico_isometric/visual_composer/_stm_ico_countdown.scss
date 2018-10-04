@@ -1,0 +1,459 @@
+.stm_ico_countdown {
+    position: relative;
+    padding: 40px 30px 20px;
+    margin: 0 auto;
+    border-radius: 9px;
+    max-width: 500px;
+    & > * {
+        position: relative;
+        z-index: 20;
+    }
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        background-size: cover;
+        background-position: 50% 0;
+        opacity: .75;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 9px;
+            background: $stm_base_color;
+        }
+    }
+    &__title {
+        padding: 0 0 30px;
+        margin-bottom: 0;
+        font-size: 30px;
+    }
+    &__button {
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        margin: 0 0 30px;
+        color: #fff !important;
+        background-color: $stm_secondary_color;
+        font-family: "Fira Sans";
+        text-align: center;
+        padding: 0 15px;
+        border-radius: 24px;
+        font-size: 18px;
+        text-decoration: none !important;
+        @include transition();
+        &:hover {
+            background-color: $stm_third_color;
+        }
+    }
+    &__prices {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 0 28px;
+        justify-content: space-between;
+        .stm_ico_countdown__price {
+            h4 {
+                padding: 0;
+                margin: 0 0 8px;
+                font-size: 30px;
+                line-height: 1;
+            }
+            span {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                font-size: 12px;
+                color: #808080;
+            }
+        }
+    }
+    &__progress {
+        .inner {
+            position: relative;
+            padding: 30px 0;
+        }
+        &_bar {
+            position: relative;
+            height: 15px;
+            background: rgba(255,255,255,0.25);
+            border-radius: 7px;
+            overflow: hidden;
+            .stm_ico_countdown__progress_completed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                background-color: $stm_secondary_color;
+                background: linear-gradient(to right, $stm_base_color, $stm_secondary_color);
+            }
+        }
+    }
+    &__progress_holder {
+        height: 30px;
+    }
+    &__softcap,
+    &__hardcap {
+        position: absolute;
+        right: 0;
+        top: 4px;
+        text-align: right;
+        height: 60px;
+        color: #fff;
+        &_label {
+            font-size: 14px;
+        }
+        &_label_2 {
+            font-size: 12px;
+        }
+    }
+    &__softcap {
+        right: auto;
+        left: 0;
+        text-align: left;
+        &_label {
+            position: relative;
+            &:after {
+                content: '';
+                position: absolute;
+                top: 26px;
+                left: 0;
+                height: 22px;
+                width: 1px;
+                background-color: #fff;
+                z-index: 20;
+            }
+        }
+        &_label_2 {
+            position: relative;
+            left: -25px;
+            span {
+                color: #808080;
+            }
+        }
+    }
+
+    &__contract {
+        .stm_ico_countdown__prices {
+            justify-content: center;
+        }
+        .stm_ico_countdown__softcap_label {
+            span {
+                color: grey;
+            }
+            &:after {
+                display: none;
+            }
+        }
+    }
+
+    &.style_2 {
+        max-width: 100%;
+        padding: 50px 50px 20px 62px;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.25);
+        .countdown_box {
+            margin-bottom: 12px;
+        }
+        .stm_ico_countdown__price {
+            h4 {
+                color: #fff;
+            }
+        }
+        .stm_countdown_wrap {
+            display: flex;
+            flex-wrap: wrap;
+            .stm_ico_countdown__title {
+                padding-bottom: 33px;
+                font-weight: 600;
+            }
+            .stm_left_countdown {
+                -webkit-box-flex: 0;
+                flex: 0 0 48%;
+                max-width: 48%;
+                padding-right: 20px;
+            }
+            .stm_right_countdown {
+                -webkit-box-flex: 0;
+                flex: 0 0 52%;
+                max-width: 52%;
+            }
+            .countdownHolder {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                .count-box {
+                    -webkit-box-flex: 0;
+                    flex: 0 0 25%;
+                    max-width: 25%;
+                    color: #fff;
+                    text-align: left;
+                    position: relative;
+                    overflow: hidden;
+					&:not(:last-child)::after {
+						content: ':';
+						position: absolute;
+						font-size: 54px;
+						color: #00ff8b;
+						top: -16px;
+						left: 77px;
+						height: 62px;
+
+					}
+                    .position {
+                        font-size: 54px;
+                        line-height: 54px;
+                        margin-bottom: 5px;
+                        font-weight: 300;
+                        display: inline-block;
+                        width: 28px;
+                        min-height: 53px;
+                        vertical-align: top;
+                        position: relative;
+                        font-family: Poppins;
+                        font-weight: 300;
+                        .digit {
+							transition: .5s;
+							position: absolute;
+							top: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            &:not(.static){
+                                //top: 0 !important;
+                            }
+                        }
+
+                    }
+                    .countdown_label {
+                        font-size: 12px;
+                        font-weight: 500;
+                        width: 50px;
+                        text-align: center;
+                        color: #babfd5;
+                        text-transform: lowercase;
+                    }
+                    &.countSeconds {
+                        .position:nth-child(2n)::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .stm_ico_countdown__bg {
+            opacity: 1;
+            &::after {
+                background-image: linear-gradient(to right, #000159, #205db3);
+            }
+        }
+        .stm_ico_countdown__prices {
+            margin-bottom: 0;
+        }
+        .stm_ico_countdown__progress {
+            margin-bottom: 12px;
+            .stm_ico_countdown__softcap_label_2 {
+                span {
+                    color: #babfd5;
+                }
+            }
+        }
+        .stm_ico_countdown__links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            .price_description {
+                color: #fff;
+                font-size: 18px;
+                font-weight: 600;
+            }
+            .stm_ico_countdown__button {
+                display: inline-block;
+                background-size: 200% auto;
+                background-image: linear-gradient(to right, $stm_base_color 0, $stm_secondary_color 51%, $stm_base_color 100%);
+                margin-bottom: 0;
+                padding-left: 35px;
+                padding-right: 35px;
+                font-family: 'Poppins';
+                font-size: 16px;
+                &:hover {
+                    background-position: right center;
+                }
+            }
+        }
+		#crypterio-contract {
+			.stm_ico_countdown__prices {
+				justify-content: flex-start;
+				h4 {
+					color: #fff;
+				}
+			}
+		}
+		.agreements .vc_btn3 {
+			background-color: transparent !important;
+		}
+
+    }
+}
+.stm_ico_countdown__button {
+    font-family: 'Poppins' !important;
+}
+
+/*Countdown*/
+.stm_ico_countdown {
+    .countdown_box {
+        margin-bottom: 30px;
+        color: #fff;
+        .stm_countdown {
+            float: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0;
+            justify-content: space-between;
+            .count-box {
+                position: relative;
+                float: none;
+                width: 65px;
+                min-width: auto;
+                margin: 0 0 40px;
+                border: 0;
+                background-color: #fff;
+                border-radius: 6px;
+                &:after,
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: #b5b5b5;
+                    z-index: 1;
+                }
+                & > * {
+                    z-index: 10;
+                }
+                &:after {
+                    background-color: #f2f2f2;
+                    top: 0;
+                    border-top-left-radius: 6px;
+                    border-top-right-radius: 6px;
+                    height: 50%;
+                }
+                .position {
+                    height: 70px;
+                    line-height: 70px;
+                    position: relative;
+                    left: -2px;
+                    &.divs {
+                        left: 3px;
+                    }
+                    .digit {
+                        font-size: 42px;
+                        color: #000;
+                    }
+                }
+            }
+            .countdown_label {
+                position: absolute;
+                width: 100%;
+                bottom: -34px;
+                left: 0;
+                border-top: 0;
+                opacity: .5;
+                color: #fff;
+            }
+        }
+    }
+    &__payments {
+        display: flex;
+        margin: 20px 0 0;
+        justify-content: space-between;
+        .stm_ico_countdown__payment {
+            display: block;
+            padding: 2px 1px;
+            border: 1px solid #333333;
+            border-radius: 4px;
+            background: rgba(0,0,0,0.5);
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .stm_ico_countdown .countdown_box {
+        .stm_countdown .count-box {
+            width: 50px;
+            .position {
+                width: 20px;
+                .digit {
+                    font-size: 31px;
+                }
+            }
+        }
+    }
+    .stm_ico_countdown.style_2 {
+        .countdown_box {
+            margin-bottom: 15px;
+        }
+        .stm_ico_countdown__progress {
+            margin-bottom: 23px;
+        }
+    }
+
+    .stm_ico_countdown.style_2 {
+        .stm_countdown_wrap {
+            .stm_ico_countdown__title {
+                padding-bottom: 15px;
+                font-size: 24px;
+            }
+            .stm_ico_countdown__links {
+                .price_description {
+                    font-size: 15px;
+                    margin-bottom: 15px;
+                }
+            }
+            .countdownHolder {
+                .count-box {
+                    margin-bottom: 15px;
+					&::after {
+						font-size: 36px !important;
+						top: -7px !important;
+					}
+                    .position {
+                        font-size: 36px;
+                        line-height: 40px;
+                        min-height: 40px;
+                        width: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1199px) {
+    .stm_ico_countdown.style_2 {
+        padding: 25px;
+        .stm_countdown_wrap {
+            .countdownHolder .count-box {
+                text-align: center;
+				&::after {
+					right: -2px;
+					transform: none;
+					left: auto !important;
+				}
+                .countdown_label {
+                    width: auto;
+                }
+            }
+            .stm_left_countdown, .stm_right_countdown {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}

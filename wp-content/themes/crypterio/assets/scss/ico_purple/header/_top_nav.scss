@@ -1,0 +1,88 @@
+.stm-navigation {
+    a {
+        @include transition();
+        position: relative;
+        &::before {
+            content: '';
+            display: block;
+            width: 0;
+            position: absolute;
+            height: 3px;
+            left: 15px;
+            width: 0;
+            bottom: -10px;
+            background: -webkit-linear-gradient(to right, $stm_secondary_color, $stm_third_color);
+            background: linear-gradient(to right, $stm_secondary_color, $stm_third_color);
+            transition: .3s;
+        }
+        &:hover {
+            &::before {
+                width: calc(100% - 30px);
+            }
+        }
+    }
+}
+
+/*Mega Menu*/
+html body ul {
+    li.stm_megamenu {
+        > ul.sub-menu {
+            > li {
+                > a {
+                    color: #fff;
+                    font-size: 18px;
+                    &:hover {
+                        color: $stm_secondary_color !important;
+                    }
+                }
+                &:hover {
+                    > a {
+                        color: $stm_base_color;
+                    }
+                }
+                .stm_megaicon, .fa {
+                    color: $stm_secondary_color;
+                }
+
+                .megamenu-contacts {
+                    margin-top: -3px;
+                    td {
+                        vertical-align: top;
+                        padding-bottom: 12px;
+
+                        .stm_megaicon, .fa {
+                            margin-top: 3px;
+                        }
+
+                        a {
+                            display: inline !important;
+                            padding: 0 !important;
+                            color: rgba(#333333, 0.90) !important;
+                            text-decoration: underline !important;
+                            &:hover {
+                                text-decoration: none !important;
+                                color: #333333 !important;
+                            }
+                        }
+                    }
+                    tr:last-child {
+                        td {
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.stm-header__hb .stm-navigation {
+    ul {
+        li {
+            a {
+                color: #fff;
+                font-size: 18px;
+                font-weight: 500 !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,176 @@
+.stm_ico_grid {
+    &__single {
+        position: relative;
+        min-height: 113px;
+        margin-bottom: 20px;
+        padding: 20px 20px 20px 105px;
+        border: 1px solid #e1e1e1;
+        border-radius: 6px;
+        overflow: hidden;
+        transition: .3s ease;
+        &.sponsored_ico {
+            border: 1px solid #326dec;
+        }
+        &:hover {
+            box-shadow: 0 0 15px #e1e1e1;
+            transform: translateY(-5px);
+        }
+        &.time_over_99 {
+            .stm_ico_grid__days {
+                font-size: 22px;
+                margin: 5px 0 0;
+            }
+        }
+        &.trending_ico {
+            &:before {
+                content: '';
+                position: absolute;
+                top: -30px;
+                left: -10px;
+                transform: rotate(45deg);
+                transform-origin: top center;
+                width: 65px;
+                height: 65px;
+                background-color: #326dec;
+            }
+            &:after {
+                position: absolute;
+                top: 5px;
+                left: 10px;
+                display: inline-block;
+                font: normal normal normal 14px/1 FontAwesome;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                font-size: 14px;
+                color: #fff;
+                content: "\f0e7";
+            }
+        }
+    }
+    &__date {
+        position: absolute;
+        left: 20px;
+        width: 68px;
+        min-height: 70px;
+        border: 1px solid #e1e1e1;
+        padding: 2px 5px;
+        font-size: 11px;
+        text-align: center;
+        color: #808080;
+    }
+    &__days {
+        margin: 0 0 -10px;
+        font-size: 36px;
+        color: #000;
+    }
+    &__content {
+        margin-top: -5px;
+    }
+    &__title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #000000;
+    }
+    .stm_ico_rate {
+        margin-top: 5px;
+        color: #808080;
+        &__sponsored {
+            color: #fe467c;
+        }
+    }
+    &__category {
+        a {
+            font-size: 13px;
+            color: #808080;
+        }
+    }
+    &__goals {
+        margin: 10px 0 0;
+        font-size: 13px;
+        color: #000000;
+        .stm_ico_goal {
+            span {
+                color: #808080;
+            }
+            &.in_progress {
+                span {
+                    color: #68b541;
+                    &.percent {
+                        color: #808080;
+                    }
+                }
+            }
+            label {
+                margin-bottom: 0;
+                color: #808080;
+                font-weight: 400;
+            }
+            bdo {
+                color: #000000;
+            }
+        }
+    }
+    &__all {
+        display: block;
+        padding: 12px 15px;
+        margin: 0 0 30px;
+        width: 100%;
+        background-color: transparent;
+        font-weight: 700;
+        border: 2px solid #326dec;
+        border-radius: 5px;
+        color: #000000;
+        font-size: 16px;
+        text-decoration: none !important;
+        text-align: center;
+        i {
+            position: relative;
+            top: -1px;
+            margin-left: 10px;
+            font-size: 14px;
+            color: #fe467c;
+            transition: .3s ease;
+        }
+        &:hover {
+            background-color: #326dec;
+            color: #fff !important;
+            i {
+                transform: translateX(3px);
+            }
+        }
+    }
+    &__main_info {
+        overflow: hidden;
+        padding-right: 15px;
+        > a {
+            display: block;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    }
+    &__single.s_logo {
+        min-height: 120px;
+        .stm_ico_grid__goals {
+            margin: 3px 0 0;
+        }
+        .stm_ico_grid__date {
+            min-height: 75px;
+            border: 0;
+            padding: 0;
+            img {
+                position: relative;
+                top: 7px;
+                border-radius: 50%;
+            }
+        }
+        .days_left {
+            margin: 3px 0 0;
+            color: #808080;
+        }
+    }
+}
+
+.stm_ico_rate {
+    font-size: 13px;
+}

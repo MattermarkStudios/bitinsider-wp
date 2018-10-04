@@ -1,0 +1,18 @@
+.stm_wave_roadmap {
+	.stm_wave_roadmap__road_date {
+		font-size: 18px;
+		font-weight: 600;
+	}
+}
+.stm_wave_roadmap__road_top .stm_wave_roadmap__road_anchor:before, .stm_wave_roadmap__road_bottom .stm_wave_roadmap__road_anchor:before {
+	border: 1px dotted rgba(255,255,255,.5) !important;
+	border-right: none !important;
+	border-top: none !important;
+	border-bottom: none !important;
+}
+.stm_wave_roadmap__road_bottom .stm_wave_roadmap__road_anchor:before {
+	height: 78px !important;
+}
+.stm_wave_roadmap__road_description {
+	opacity: .75 !important;
+}

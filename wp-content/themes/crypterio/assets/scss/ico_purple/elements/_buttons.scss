@@ -1,0 +1,167 @@
+body div .stm_btn {
+	padding: 12px 29px 13px 29px !important;
+	transition: all .4s;
+	border-radius: 45px;
+	background-image: linear-gradient(to right,$stm_secondary_color 0, $stm_third_color 51%, $stm_secondary_color 100%) !important;
+	background-image: -webkit-linear-gradient(to right,$stm_secondary_color 0, $stm_third_color 51%, $stm_secondary_color 100%) !important;
+	background-image: -moz-linear-gradient(to right,$stm_secondary_color 0, $stm_third_color 51%, $stm_secondary_color 100%) !important;
+	background-size: 200% auto !important;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	&:hover {
+		background-position: right center;
+		color: #fff !important;
+	}
+}
+body div .vc_btn3:not(.vc_btn3-style-outline), body div .button {
+	transition: all .4s;
+	border-radius: 45px !important;
+	background-color: transparent !important;
+	background-image: linear-gradient(to right, $stm_secondary_color 0, $stm_third_color 51%, $stm_secondary_color 100%) !important;
+	background-image: -webkit-linear-gradient(to right, $stm_secondary_color 0, $stm_third_color 51%, $stm_secondary_color 100%) !important;
+	background-image: -moz-linear-gradient(to right, $stm_secondary_color 0, $stm_third_color 51%, $stm_secondary_color 100%) !important;
+	background-size: 200% auto;
+	font-weight: 700;
+	text-transform: uppercase;
+	border: none !important;
+	background-repeat: repeat !important;
+	@media (max-width: 1024px) {
+		background: none;
+		background-image: -webkit-linear-gradient(to right,$stm_secondary_color 0, $stm_third_color 51%, $stm_secondary_color 100%) !important;
+		background-image: linear-gradient(to right,$stm_secondary_color 0, $stm_third_color 51%, $stm_secondary_color 100%) !important;
+		background-image: -moz-linear-gradient(to right,$stm_secondary_color 0, $stm_third_color 51%, $stm_secondary_color 100%) !important;
+	}
+	&:hover {
+		background-position: right center;
+		color: #fff !important;
+	}
+}
+
+body div .vc_btn3.vc_btn3-style-flat.vc_btn3-icon-left {
+	background: none !important;
+	padding: 12px 0 12px 65px !important;
+	height: 51px;
+	color: #fff;
+	i {
+		font-size: 16px !important;
+		left: 0 !important;
+		background: -webkit-linear-gradient(to right, #0096ff, #28eedb);
+		background: linear-gradient(to right, #0096ff, #28eedb);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		line-height: 47px !important;
+		height: 51px !important;
+		width: 50px !important;
+		border: 2px #28eedb solid;
+		border-radius: 50%;
+		text-align: center;
+	}
+	&:hover {
+		color: #fff !important;
+		i {
+			color: #fff !important;
+			-webkit-background-clip: border-box !important;
+			-webkit-text-fill-color: #fff !important;
+		}
+	}
+}
+
+.vc_btn3.vc_btn3-size-md {
+	padding: 12px 48px 13px 48px;
+}
+body .vc_general.vc_btn3.vc_btn3-size-md.vc_btn3-icon-left:not(.vc_btn3-o-empty) .vc_btn3-icon {
+	color: inherit;
+}
+#comments button {
+	border: none !important;
+}
+.vc_cta3-actions {
+	.vc_btn3::first-letter {
+		text-transform: capitalize;
+	}
+}
+.vc_btn3-style-custom {
+	&:before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		border-radius: 50px;
+		box-shadow: 0px 10px 20px 0px rgba($stm_secondary_color, 0.5) !important;
+	}
+}
+body .vc_btn3-container .vc_general, .stm_ico_countdown__button {
+	letter-spacing: .84px;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+body .stm_ico_countdown__popup .stm_ico_countdown__button_copy {
+	border: none;
+	line-height: normal;
+	padding: 15px 29px !important;
+	color: #fff !important;
+}
+body #main .white_btn {
+	button,
+	a {
+		background-image: linear-gradient(to right,#fff 0,#fff 51%,#fff 100%)!important;
+		background-image: -webkit-linear-gradient(to right,#fff 0,#fff 51%,#fff 100%)!important;
+		transition: .4s;
+		padding-right: 20px;
+		background-repeat: repeat !important;
+		i {
+			transition: none;
+		}
+		&:hover {
+			background-image: linear-gradient(to right,#475166 0,#475166 51%,#475166 100%)!important;
+			background-image: -webkit-linear-gradient(to right,#475166 0,#475166 51%,#475166 100%)!important;
+			color: #fff !important;
+			i {
+				color: #fff !important;
+			}
+		}
+	}
+}
+body #main .vc_cta3-actions {
+	button,
+	a {
+		background-color: transparent!important;
+		background-image: linear-gradient(to right,#603cab 0,#f15a91 51%,#603cab 100%)!important;
+		background-image: -moz-linear-gradient(to right,#603cab 0,#f15a91 51%,#603cab 100%)!important;
+		background-image: -webkit-linear-gradient(to right,#603cab 0,#f15a91 51%,#603cab 100%)!important;
+		background-size: 200% auto !important;
+		transition: .4s;
+		color: #fff !important;
+		background-repeat: repeat !important;
+		&:hover {
+			background-position: right center !important;
+		}
+	}
+}
+.error404 .button {
+	color: #fff !important;
+}
+.purple_btn {
+	button, a {
+		&::before {
+			box-shadow: none !important;
+			transition: .3s;
+		}
+	}
+	i {
+		color: #1e124f !important;
+	}
+	&:hover {
+		i {
+			color: #fff !important;
+		}
+		button, a {
+			&::before {
+				box-shadow: 0 10px 20px 0 rgba(96,60,171,.5)!important;
+			}
+		}
+	}
+}

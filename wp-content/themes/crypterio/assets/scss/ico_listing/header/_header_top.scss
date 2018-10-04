@@ -1,0 +1,32 @@
+.stm-header__hb .stm-navigation__default > ul > li ul li > a {
+    color: $stm_base_color !important;
+}
+
+.stm-header__row_top {
+    .stm-navigation a {
+        font-size: 13px;
+    }
+}
+
+.stm-header__row_center {
+    .stm-navigation a {
+        font-weight: 700 !important;
+    }
+}
+
+.stm-header {
+    .stm_btn {
+        &.btn_outline {
+            padding: 12px 31px;
+            font-size: 16px;
+            background-color: transparent !important;
+            border: 2px solid $stm_third_color;
+            border-radius: 6px;
+            &:hover {
+                background-color: $stm_secondary_color !important;
+                border-color: $stm_secondary_color;
+                color: #fff !important;
+            }
+        }
+    }
+}

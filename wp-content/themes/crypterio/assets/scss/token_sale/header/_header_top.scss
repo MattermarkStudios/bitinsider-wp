@@ -1,0 +1,19 @@
+.stm-header__hb .stm-navigation__default > ul > li ul li > a {
+    color: $stm_base_color !important;
+}
+
+.stm-header__hb .stm-navigation__default>ul>li ul li{
+    border-bottom: 0 !important;
+    >a:hover {
+        background-color: $stm_secondary_color;
+        color: #fff;
+    }
+}
+
+.stm_mobile__header {
+    background-color: $stm_third_color;
+}
+
+.stm_mobile__switcher span {
+    background-color: $stm_secondary_color !important;
+}

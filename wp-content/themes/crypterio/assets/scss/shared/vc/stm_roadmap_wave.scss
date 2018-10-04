@@ -1,0 +1,152 @@
+.stm_wave_roadmap {
+    padding-left: 10px;
+    margin-left: -10px;
+    overflow-x: auto;
+    &__road {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        &_top {
+            height: 150px;
+            .stm_wave_roadmap__road_content:not(:first-child) {
+                margin-left: 50px;
+            }
+            .stm_wave_roadmap__road_anchor {
+                position: absolute;
+                top: 8px;
+                left: 0;
+                width: 8px;
+                height: 8px;
+                background-color: #1c7bf7;
+                border-radius: 50%;
+                z-index: 99;
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 11px;
+                    left: 3px;
+                    width: 1px;
+                    height: 160px;
+                    border: 1px dashed rgba(255,255,255,.5);
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 174px;
+                    left: -5px;
+                    width: 19px;
+                    height: 19px;
+                    border: 7px solid #fff;
+                    border-radius: 50%;
+                }
+            }
+        }
+        &_bottom {
+            padding: 73px 9.5% 0 13%;
+            .stm_wave_roadmap__road_content {
+                width: 30%;
+            }
+            .stm_wave_roadmap__road_anchor {
+                position: absolute;
+                top: 8px;
+                left: 0;
+                width: 8px;
+                height: 8px;
+                background-color: #1c7bf7;
+                border-radius: 50%;
+                z-index: 99;
+                &:before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: 11px;
+                    left: 3px;
+                    width: 1px;
+                    height: 75px;
+                    border: 1px dashed rgba(255,255,255,.5);
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: 92px;
+                    left: -5px;
+                    width: 19px;
+                    height: 19px;
+                    border: 7px solid #fff;
+                    border-radius: 50%;
+                }
+            }
+        }
+        &_content {
+            width: 19%;
+        }
+        &_date {
+            position: relative;
+            padding-left: 23px;
+            font-size: 18px;
+        }
+        &_description {
+            padding-left: 23px;
+            font-size: 13px;
+            line-height: 24px;
+            opacity: .5;
+        }
+    }
+    &__wave {
+        position: relative;
+        width: 85%;
+        height: 54px;
+        overflow: hidden;
+        svg {
+            width: 973px;
+        }
+
+        .unfilled {
+            path {
+                fill: rgba(255,255,225,.25);
+            }
+            &.shadow_wave {
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+
+        .filled {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 54px;
+            overflow: hidden;
+            svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .stm_wave_roadmap {
+        &__road {
+            display: block;
+            padding: 0 !important;
+            height: auto !important;
+            &_content {
+                width: 100% !important;
+                margin: 0 0 30px !important;
+            }
+            &_anchor {
+                display: none !important;
+            }
+        }
+        &__wave {
+            display: none !important;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.stm_currencies_simple_widget {
+    .scsl__single {
+        margin-bottom: 40px;
+        .inner {
+            display: flex;
+            flex-wrap: wrap;
+            color: #fff;
+            .scsl__name {
+                width: 50%;
+                .scsl__image {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 25px;
+                    height: 25px;
+                    margin-right: 10px;
+                }
+            }
+            .scsl__price {
+                width: 30%;
+            }
+            .scsl__change_plus,
+            .scsl__change_minus {
+                width: 20%;
+            }
+            .scsl__change_plus {
+                color: #98e2a2;
+            }
+            .scsl__change_minus {
+                color: #d70d0d;
+            }
+        }
+    }
+}

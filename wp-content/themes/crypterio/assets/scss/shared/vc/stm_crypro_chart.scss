@@ -1,0 +1,165 @@
+$cube_bg: #333;
+.stm_crypto_chart {
+    position: relative;
+    overflow: hidden;
+    .stm_crypto_chart {
+        &__toolbar {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        &__periods {
+            margin-top: 30px;
+            align-self: stretch;
+            display: flex;
+            >span {
+                display: inline-block;
+                text-align: center;
+                height: 100%;
+                padding: 5px 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 5px;
+                cursor: pointer;
+                &.active,
+                &:hover {
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+        }
+        &__error {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 15px;
+            transform: translateX(110%);
+            transition: all .3s ease;
+            z-index: 10;
+            &.active {
+                transform: translateX(0);
+            }
+            span {
+                margin-right: 20px;
+            }
+            button {
+                background-color: transparent;
+                transition: all .3s ease;
+                box-shadow: none !important;
+                border-color: #fff;
+                &:hover {
+                    background-color: #fff;
+                    color: #000;
+                }
+            }
+        }
+        &__currency {
+            &+.select2 {
+                display: inline-block;
+                max-width: 200px;
+                width: auto !important;
+            }
+        }
+        &__preloader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, .1);
+        }
+    }
+    @keyframes loader {
+        0%,
+        10%,
+        100% {
+            width: 20px;
+            height: 20px;
+        }
+        65% {
+            width: 40px;
+            height: 40px;
+        }
+    }
+    @keyframes loaderBlock {
+        0%,
+        30% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(90deg);
+        }
+    }
+    @keyframes loaderBlockInverse {
+        0%,
+        20% {
+            transform: rotate(0);
+        }
+        100% {
+            transform: rotate(-90deg);
+        }
+    }
+    .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        transform: translate(-50%, -50%) rotate(45deg) translate3d(0, 0, 0);
+        animation: loader 1.2s infinite ease-in-out;
+        span {
+            position: absolute;
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: $cube_bg;
+            animation: loaderBlock 1.2s infinite ease-in-out both;
+            &:nth-child(1) {
+                top: 0;
+                left: 0;
+            }
+            &:nth-child(2) {
+                top: 0;
+                right: 0;
+                animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+            }
+            &:nth-child(3) {
+                bottom: 0;
+                left: 0;
+                animation: loaderBlockInverse 1.2s infinite ease-in-out both;
+            }
+            &:nth-child(4) {
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+    @media screen and (max-width:500px) {
+        .stm_crypto_chart {
+            &__toolbar {
+                flex-direction: column;
+            }
+            &__currency {
+                &+.select2 {
+                    max-width: 100%;
+                    width: 100% !important;
+                    margin-bottom: 30px;
+                }
+            }
+            &__periods {
+                margin: 0;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                span {
+                    font-size: 12px;
+                    padding: 10px;
+                    margin-bottom: 15px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

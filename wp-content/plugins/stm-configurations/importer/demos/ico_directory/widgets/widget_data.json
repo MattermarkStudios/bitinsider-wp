@@ -1,0 +1,43 @@
+[
+    {
+        "crypterio-footer-1": [
+            "text-3"
+        ],
+        "crypterio-footer-2": [
+            "nav_menu-3"
+        ],
+        "crypterio-footer-3": [
+            "text-4",
+            "mc4wp_form_widget-2"
+        ]
+    },
+    {
+        "text": {
+            "3": {
+                "title": "",
+                "text": "2018 \u00a9 Crypterio ICO Database",
+                "filter": true,
+                "visual": true
+            },
+            "4": {
+                "title": "Subscribe",
+                "text": "Sign up for Alerts, Special Offers, Education and Updates.",
+                "filter": true,
+                "visual": true
+            },
+            "_multiwidget": 1
+        },
+        "nav_menu": {
+            "3": {
+                "nav_menu": 11
+            },
+            "_multiwidget": 1
+        },
+        "mc4wp_form_widget": {
+            "2": {
+                "title": ""
+            },
+            "_multiwidget": 1
+        }
+    }
+]

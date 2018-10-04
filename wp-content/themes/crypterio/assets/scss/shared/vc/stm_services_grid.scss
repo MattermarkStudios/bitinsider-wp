@@ -1,0 +1,105 @@
+.stm_services_grid {
+    &__posts {
+        margin: 0 -15px;
+        &_hover {
+            transition: .3s ease;
+            &:hover {
+                box-shadow: 0 10px 40px rgba(0, 0, 0, .35);
+                .read_more {
+                    opacity: 1;
+                    transform: translateX(0);
+                    i {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+            }
+        }
+        &_single {
+            width: 33.3333%;
+            padding: 0 15px;
+            margin: 0 0 30px;
+            transition: 0s ease;
+            &__inner {
+                padding: 30px;
+                background-color: #fff;
+            }
+            &_title {
+                position: relative;
+                padding: 30px 0 0;
+                font-size: 20px;
+                text-transform: uppercase;
+                font-weight: 700;
+                &:after {
+                    content: '';
+                    margin: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    width: 47px;
+                    height: 5px;
+                }
+            }
+            &_meta {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                min-height: 34px;
+                .read_more {
+                    opacity: 0;
+                    font-size: 16px;
+                    font-weight: 700;
+                    transform: translateX(-10px);
+                    transition: .3s ease;
+                    vertical-align: top;
+                    i {
+                        position: relative;
+                        top: 2px;
+                        margin-left: 4px;
+                        font-size: 20px;
+                        opacity: 0;
+                        transform: translateX(-5px);
+                        transition: .3s .1s ease;
+                    }
+                }
+                .service_cost {
+                    font-size: 24px;
+                    letter-spacing: 0.2px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    &__categories {
+        padding: 10px 15px;
+        margin: 0 0 40px;
+        text-align: center;
+        &_single {
+            display: inline-block;
+            padding: 15px 20px;
+            margin: 0 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            &:hover,
+            &.mbc {
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .stm_services_grid__posts_single {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .stm_services_grid__posts_single {
+        width: 100%;
+    }
+}
