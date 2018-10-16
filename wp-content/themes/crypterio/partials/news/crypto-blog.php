@@ -52,12 +52,6 @@
 	    <?php get_template_part('partials/news/parts/_related'); ?>
     </div>
 
-	<?php if($blog_ad = get_theme_mod('post_ad_html', '')): ?>
-        <div class="stm_blog_ad">
-			<?php echo wp_kses_post($blog_ad); ?>
-        </div>
-	<?php endif; ?>
-
 	<?php if ( comments_open() || get_comments_number() ) : ?>
         <div class="stm_post_comments">
 			<?php comments_template(); ?>

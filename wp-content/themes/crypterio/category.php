@@ -26,12 +26,6 @@ $structure = crypterio_get_structure($sidebar_id, $sidebar_type, get_theme_mod('
 
         <div class="stm_category_name" data-title="<?php echo esc_attr($tax_name); ?>"></div>
 
-        <?php if($blog_ad = get_theme_mod('post_ad_html', '')): ?>
-            <div class="stm_blog_ad">
-                <?php echo wp_kses_post($blog_ad); ?>
-            </div>
-        <?php endif; ?>
-
 		<?php
 		$posts_class = '';
 		$paginate_links_data = paginate_links(array('type' => 'array'));

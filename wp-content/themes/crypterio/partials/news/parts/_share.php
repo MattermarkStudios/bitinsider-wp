@@ -19,10 +19,10 @@ $socials = array(
 		'url' => "https://www.linkedin.com/shareArticle?mini=true&url={$link}&title=&summary=&source=",
 		'share' => esc_html__('Share', 'crypterio')
 	),
-	'pinterest' => array(
-		'url' => "https://pinterest.com/pin/create/button/?url={$link}&media={$image}&description=",
-		'share' => esc_html__('Pin it', 'crypterio')
-	),
+	// 'pinterest' => array(
+	// 	'url' => "https://pinterest.com/pin/create/button/?url={$link}&media={$image}&description=",
+	// 	'share' => esc_html__('Pin it', 'crypterio')
+	// ),
 );
 
 ?>
